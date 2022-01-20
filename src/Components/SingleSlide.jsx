@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
+
 import './OwlDemo.scss';
+import './SingleSlide.scss';
+
 
 const SingleSlide = () => {
-
     const [isActive, setActive] = useState("false");
 
     const viewFullImage = () => {
@@ -10,9 +13,9 @@ const SingleSlide = () => {
     };
 
     return (
-        <div className='carousel-item-container' >
+        <section className='carousel-item-container'>
             <div className={isActive ? 'carousel-item-left' : "image-modal"} onClick={viewFullImage}>
-                <img className="img" src={'assets/img/apartamento-2.jpg'} alt="apartamento duplex" />
+                <img className="img" src={'assets/img/apartamento-2.jpg'} alt="apartamento 2" />
             </div>
             <div className='carousel-item-right'>
                 <h2>Apartamentos</h2>
@@ -22,6 +25,7 @@ const SingleSlide = () => {
                     La planta superior es una buhardilla con 2 camas individuales con suficiente espacio para añadir más camas y terraza privada
                 </p>
                 <div className='button-container'>
+                <Link to='/single-component'>
                     <button>
                         <div>
                             <span>
@@ -34,6 +38,7 @@ const SingleSlide = () => {
                             </span>
                         </div>
                     </button>
+                    </Link>
                     <button className='button-promotion'>
                         <div>
                             <span>
@@ -48,7 +53,7 @@ const SingleSlide = () => {
                     </button>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

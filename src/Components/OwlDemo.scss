@@ -12,6 +12,7 @@
         & .carousel-item-left {
                 overflow: hidden;
                 cursor:zoom-in;
+                min-width: 45.5vw;
                 & img  {
                         height: 100%;
                         max-height: 80vh;

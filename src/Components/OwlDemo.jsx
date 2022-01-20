@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
+
 import OwlCarousel from 'react-owl-carousel';
+import SingleSlide from './SingleSlide';
+
 import './OwlDemo.scss';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-import SingleSlide from './SingleSlide';
 
 const OwlDemo = () => {
 
@@ -21,6 +24,7 @@ const OwlDemo = () => {
     };
 
     return (
+
         <div style={{ padding: `10vh 5vh` }}>
             <OwlCarousel className="owl-theme"
                 items={1}
@@ -28,9 +32,8 @@ const OwlDemo = () => {
                 nav
                 navText={['<i class="pi pi-arrow-left"></i>', '<i class="pi pi-arrow-right"></i>']}
                 // EN CASO DE QUE QUERAMOS FADE IN OUT EN VEZ DE DESPLAZAMIENTO LATERAL
-                /* animateIn={'animate__fadeIn'}
-                animateOut={'animate__fadeOut'} */
-                /* animateOut={'animate__fadeOut'} */
+                animateIn={'animate__fadeIn'}
+                animateOut={'animate__fadeOut'}
                 /* autoplay={5000} */
                 smartSpeed={1500}
                 autoplayHoverPause={true}
@@ -40,7 +43,7 @@ const OwlDemo = () => {
                 <SingleSlide animateIn={'animate__fadeInRight'} />
                 <div className='carousel-item-container' onClick={viewFullImage}>
                     <div className='carousel-item-left'>
-                        <img className="img" src={'assets/img/casa-playa-1.jpg'} alt="casa playa 2" />
+                        <img className="img" src={'assets/img/casa-playa-1.jpg'} alt="casa playa 1" />
                     </div>
                     <div className='carousel-item-right'>
                         <div>
@@ -56,18 +59,20 @@ const OwlDemo = () => {
                             </p>
                         </div>
                         <div className='button-container'>
-                            <button>
-                                <div>
-                                    <span>
-                                        <p>Leer más</p><i className="pi pi-arrow-right" style={{ 'fontSize': '2rem' }}></i>
-                                    </span>
-                                </div>
-                                <div>
-                                    <span>
-                                        <p>Me interesa</p><i className="pi pi-arrow-right" style={{ 'fontSize': '2rem' }}></i>
-                                    </span>
-                                </div>
-                            </button>
+
+                                <button>
+                                    <div>
+                                        <span>
+                                            <p>Leer más</p><i className="pi pi-arrow-right" style={{ 'fontSize': '2rem' }}></i>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span>
+                                            <p>Me interesa</p><i className="pi pi-arrow-right" style={{ 'fontSize': '2rem' }}></i>
+                                        </span>
+                                    </div>
+                                </button>
+
                             <button className='button-promotion'>
                                 <div>
                                     <span>
@@ -83,7 +88,7 @@ const OwlDemo = () => {
                         </div>
                     </div>
                 </div>
-                <div className='carousel-item-container' >
+                <div className='carousel-item-container'  onClick={viewFullImage}>
                     <div className='carousel-item-left'>
                         <img className="img" src={'assets/img/apartamento-2.jpg'} alt="casa playa 2" />
                     </div>
@@ -95,18 +100,20 @@ const OwlDemo = () => {
                             La planta superior es una buhardilla con 2 camas individuales con suficiente espacio para añadir más camas y terraza privada
                         </p>
                         <div className='button-container'>
-                            <button>
-                                <div>
-                                    <span>
-                                        <p>Leer más</p><i className="pi pi-arrow-right" style={{ 'fontSize': '2rem' }}></i>
-                                    </span>
-                                </div>
-                                <div>
-                                    <span>
-                                        <p>Me interesa</p><i className="pi pi-arrow-right" style={{ 'fontSize': '2rem' }}></i>
-                                    </span>
-                                </div>
-                            </button>
+                        <Link to='/single-component'>
+                                <button>
+                                    <div>
+                                        <span>
+                                            <p>Leer más</p><i className="pi pi-arrow-right" style={{ 'fontSize': '2rem' }}></i>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span>
+                                            <p>Me interesa</p><i className="pi pi-arrow-right" style={{ 'fontSize': '2rem' }}></i>
+                                        </span>
+                                    </div>
+                                </button>
+                                </Link>
                             <button className='button-promotion'>
                                 <div>
                                     <span>
@@ -122,7 +129,7 @@ const OwlDemo = () => {
                         </div>
                     </div>
                 </div>
-                <div className='carousel-item-container' >
+                <div className='carousel-item-container' onClick={viewFullImage}>
                     <div className='carousel-item-left'>
                         <img className="img" src={'assets/img/casa-playa-2.jpg'} alt="casa playa 2" />
                     </div>
@@ -134,18 +141,20 @@ const OwlDemo = () => {
                             La planta superior es una buhardilla con 2 camas individuales con suficiente espacio para añadir más camas y terraza privada
                         </p>
                         <div className='button-container'>
-                            <button>
-                                <div>
-                                    <span>
-                                        <p>Leer más</p><i className="pi pi-arrow-right" style={{ 'fontSize': '2rem' }}></i>
-                                    </span>
-                                </div>
-                                <div>
-                                    <span>
-                                        <p>Me interesa</p><i className="pi pi-arrow-right" style={{ 'fontSize': '2rem' }}></i>
-                                    </span>
-                                </div>
-                            </button>
+
+                                <button>
+                                    <div>
+                                        <span>
+                                            <p>Leer más</p><i className="pi pi-arrow-right" style={{ 'fontSize': '2rem' }}></i>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span>
+                                            <p>Me interesa</p><i className="pi pi-arrow-right" style={{ 'fontSize': '2rem' }}></i>
+                                        </span>
+                                    </div>
+                                </button>
+
                             <button className='button-promotion'>
                                 <div>
                                     <span>
@@ -161,7 +170,7 @@ const OwlDemo = () => {
                         </div>
                     </div>
                 </div>
-                <div className='carousel-item-container' >
+                <div className='carousel-item-container'  onClick={viewFullImage}>
                     <div className='carousel-item-left'>
                         <img className="img" src={'assets/img/img1.png'} alt="apartamento duplex" />
                     </div>
@@ -173,18 +182,20 @@ const OwlDemo = () => {
                             La planta superior es una buhardilla con 2 camas individuales con suficiente espacio para añadir más camas y terraza privada
                         </p>
                         <div className='button-container'>
-                            <button>
-                                <div>
-                                    <span>
-                                        <p>Leer más</p><i className="pi pi-arrow-right" style={{ 'fontSize': '2rem' }}></i>
-                                    </span>
-                                </div>
-                                <div>
-                                    <span>
-                                        <p>Me interesa</p><i className="pi pi-arrow-right" style={{ 'fontSize': '2rem' }}></i>
-                                    </span>
-                                </div>
-                            </button>
+
+                                <button>
+                                    <div>
+                                        <span>
+                                            <p>Leer más</p><i className="pi pi-arrow-right" style={{ 'fontSize': '2rem' }}></i>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <span>
+                                            <p>Me interesa</p><i className="pi pi-arrow-right" style={{ 'fontSize': '2rem' }}></i>
+                                        </span>
+                                    </div>
+                                </button>
+
                             <button className='button-promotion'>
                                 <div>
                                     <span>
@@ -202,6 +213,7 @@ const OwlDemo = () => {
                 </div>
             </OwlCarousel>
         </div>
+
     )
 }
 
