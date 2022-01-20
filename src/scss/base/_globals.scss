@@ -1,0 +1,66 @@
+html {
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'sans-serif';
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 100;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+h1 {
+    font-size: 8rem;
+    font-family: $Font1;
+}
+
+h2 {
+    font-family: $Font1;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+}
+
+h3 {
+    font-family: $Font2;
+    font-size: 5rem;
+    line-height: 5rem;
+
+}
+p {
+    font-family: $Font-text;
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+    font-weight: 400;
+}
