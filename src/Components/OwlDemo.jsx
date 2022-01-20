@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import OwlCarousel from 'react-owl-carousel';
 import './OwlDemo.scss';
 import 'owl.carousel/dist/assets/owl.carousel.css';
@@ -7,24 +7,31 @@ import SingleSlide from './SingleSlide';
 
 const OwlDemo = () => {
 
+    const [isActive, setActive] = useState("false");
+
+    const viewFullImage = () => {
+        setActive(!isActive);
+    };
+
     return (
-        <div style={{ padding: `10vh 5vh` }}>
+        <div onClick={viewFullImage} className={isActive ? null : 'hide-for-imageFull'} style={{ padding: `10vh 5vh` }}>
             <OwlCarousel className="owl-theme"
                 items={1}
-                navSpeed={5000}
-                dotsSpeed={3000}
                 loop
                 nav
-                margin={8}
                 navText={['<i class="pi pi-arrow-left"></i>', '<i class="pi pi-arrow-right"></i>']}
-                animateIn={'animate__fadeIn'}
-                animateOut={'animate__fadeOut'}
-                /* autoplay={true} */
+                // EN CASO DE QUE QUERAMOS FADE IN OUT EN VEZ DE DESPLAZAMIENTO LATERAL
+                /* animateIn={'animate__fadeIn'}
+                animateOut={'animate__fadeOut'} */
+                /* animateOut={'animate__fadeOut'} */
+                /* autoplay={5000} */
+                smartSpeed={1500}
+                autoplayHoverPause={true}
             >
                 {/* Podría trabajarse también de manera dinámica con componentes y props si hubiera una base de datos de las propiedades */}
                 {/* Ejemplo de componente hijo en padre */}
-                <SingleSlide/>
-                <div className='carousel-item-container' >
+                <SingleSlide animateIn={'animate__fadeInRight'} />
+                <div className='carousel-item-container'>
                     <div className='carousel-item-left'>
                         <img className="img" src={'assets/img/casa-playa-1.jpg'} alt="casa playa 2" />
                     </div>
@@ -190,6 +197,5 @@ const OwlDemo = () => {
         </div>
     )
 }
-
 
 export default OwlDemo;
