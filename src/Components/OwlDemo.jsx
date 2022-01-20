@@ -9,12 +9,19 @@ const OwlDemo = () => {
 
     const [isActive, setActive] = useState("false");
 
-    const viewFullImage = () => {
+    const viewFullImage = (e) => {
         setActive(!isActive);
+        let $$elementToHide1 = document.getElementsByClassName('owl-nav')
+        /* let $$elementToHide2 = document.getElementsByClassName('owl-dot')
+        let $$elementToHide3 = document.getElementsByClassName('carousel-item-right') */
+
+        console.log('Click');
+        console.log($$elementToHide1[0]);
+        $$elementToHide1[0].style["visibility"] = "hidden";
     };
 
     return (
-        <div onClick={viewFullImage} className={isActive ? null : 'hide-for-imageFull'} style={{ padding: `10vh 5vh` }}>
+        <div style={{ padding: `10vh 5vh` }}>
             <OwlCarousel className="owl-theme"
                 items={1}
                 loop
@@ -31,7 +38,7 @@ const OwlDemo = () => {
                 {/* Podría trabajarse también de manera dinámica con componentes y props si hubiera una base de datos de las propiedades */}
                 {/* Ejemplo de componente hijo en padre */}
                 <SingleSlide animateIn={'animate__fadeInRight'} />
-                <div className='carousel-item-container'>
+                <div className='carousel-item-container' onClick={viewFullImage}>
                     <div className='carousel-item-left'>
                         <img className="img" src={'assets/img/casa-playa-1.jpg'} alt="casa playa 2" />
                     </div>
