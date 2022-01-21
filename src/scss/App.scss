@@ -1,1 +1,32 @@
 @import '../index.scss';
+
+.App {
+    & .app-container-slide {
+        & .slide-title {
+            font-family: $Font2;
+            font-size: 4rem !important;
+            line-height: 4rem;
+            text-align: center;
+            font-weight: 600;
+            margin: 3rem 0;
+        }
+        & .app-button {
+            margin-top: 2rem;
+            height: 5rem;
+            border: 0;
+            background-color: #22AEA3;
+            min-width: 150px;
+            color: #E9F1F1;
+            border-radius: 3px;
+            align-items: center;
+            padding: 0.75em 2rem;
+            font-size: 2rem;
+            font-family: $Font2;
+            transition: 0.5;
+                &:hover {
+                    background-color: #15cabb;
+                    transition: 0.5;
+                }
+        }
+    }
+}

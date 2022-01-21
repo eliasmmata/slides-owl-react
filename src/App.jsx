@@ -2,10 +2,16 @@ import OwlDemo from './Components/OwlDemo';
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
-import './index.scss';
-import './App.scss';
-import SingleSlide from './Components/SingleSlide';
 import Preloader from './Components/Preloader/Preloader';
+import SingleSlide from './Components/Slides/SingleSlide';
+import SingleSlideTwo from './Components/Slides/SingleSlideTwo';
+import SingleSlideThree from './Components/Slides/SingleSlideThree';
+import SingleSlideFour from './Components/Slides/SingleSlideFour';
+import SingleSlideFive from './Components/Slides/SingleSlideFive';
+
+import './scss/App.scss';
+import './index.scss';
+import Cart from './Components/Cart/Cart';
 
 function App() {
 
@@ -14,40 +20,96 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 3000)
+    }, 5000)
   }, []);
 
   return (
     <div className="App">
       <header className="App-header">
-        <BrowserRouter>
-          <Routes>
-            {loading ? <Route path="/" element={<Preloader />}></Route>
-              : <Route path="/" element={<OwlDemo />}></Route>
-            }
-            <Route path="/single-component" element={
-              <div style={{ padding: `10vh 5vh` }}>
-                <SingleSlide />
-                <div style={{display:`flex`, justifyContent:`center`, margin:`1rem auto`}}>
-                  <Link to="/home">
-                    <button id="app-button">Volver</button>
-                  </Link>
-                </div>
-              </div>
-            }></Route>
-            <Route path="/home" element={<OwlDemo />}></Route>
-            <Route path="/single-component-two" element={<SingleSlide />}></Route>
-            <Route path="/single-component-three" element={<SingleSlide />}></Route>
-            <Route path="/single-component-four" element={<SingleSlide />}></Route>
-            <Route path="/single-component-five" element={<SingleSlide />}></Route>
-          </Routes>
-        </BrowserRouter>
       </header>
+      <BrowserRouter>
+        <Routes>
+          {loading ? <Route path="/" element={<Preloader />}></Route>
+            : <Route path="/" element={<OwlDemo />}></Route>
+          }
+          <Route path="/home" element={<OwlDemo />}></Route>
+
+          <Route path="/houses/single-house-one" element={
+            <section className='app-container-slide animate__fadeIn' style={{ padding: `0 5rem` }}>
+              <h3 className="slide-title">Casa Link Route 1</h3>
+              <SingleSlide />
+              <div style={{ display: `flex`, justifyContent: `center`, margin: `1rem auto` }}>
+                <Link to="/home">
+                  <button className="app-button">
+                    <i class="pi pi-home" style={{ marginRight: `1rem` }}></i>
+                    Volver
+                  </button>
+                </Link>
+              </div>
+            </section>
+          }></Route>
+          <Route path="/houses/single-house-two" element={
+            <section className='app-container-slide animate__fadeIn' style={{ padding: `0 5rem` }}>
+              <h3 className="slide-title">Casa Link Route 2</h3>
+              <SingleSlideTwo />
+              <div style={{ display: `flex`, justifyContent: `center`, margin: `1rem auto` }}>
+                <Link to="/home">
+                  <button className="app-button">
+                    <i class="pi pi-home" style={{ marginRight: `1rem` }}></i>
+                    Volver
+                  </button>
+                </Link>
+              </div>
+            </section>
+          }></Route>
+
+          <Route path="/houses/single-house-three" element={
+            <section className='app-container-slide animate__fadeIn' style={{ padding: `0 5rem` }}>
+              <h3 className="slide-title">Casa Link Route 3</h3>
+              <SingleSlideThree />
+              <div style={{ display: `flex`, justifyContent: `center`, margin: `1rem auto` }}>
+                <Link to="/home">
+                  <button className="app-button">
+                    <i class="pi pi-home" style={{ marginRight: `1rem` }}></i>
+                    Volver
+                  </button>
+                </Link>
+              </div>
+            </section>
+          }></Route>
+          <Route path="/houses/single-house-four" element={
+            <section className='app-container-slide animate__fadeIn' style={{ padding: `0 5rem` }}>
+              <h3 className="slide-title">Casa Link Route 4</h3>
+              <SingleSlideFour />
+              <div style={{ display: `flex`, justifyContent: `center`, margin: `1rem auto` }}>
+                <Link to="/home">
+                  <button className="app-button">
+                    <i class="pi pi-home" style={{ marginRight: `1rem` }}></i>
+                    Volver
+                  </button>
+                </Link>
+              </div>
+            </section>
+          }></Route>
+          <Route path="/houses/single-house-five" element={
+            <section className='app-container-slide animate__fadeIn' style={{ padding: `0 5rem` }}>
+              <h3 className="slide-title">Casa Link Route 3</h3>
+              <SingleSlideFive />
+              <div style={{ display: `flex`, justifyContent: `center`, margin: `1rem auto` }}>
+                <Link to="/home">
+                  <button className="app-button">
+                    <i class="pi pi-home" style={{ marginRight: `1rem` }}></i>
+                    Volver
+                  </button>
+                </Link>
+              </div>
+            </section>
+          }></Route>
+
+          <Route path="/houses/book" element={<Cart />}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
-
-
-
-
   );
 }
 

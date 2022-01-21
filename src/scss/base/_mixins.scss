@@ -16,3 +16,29 @@
         @content;
     }
 }
+
+
+@mixin fade-in($waitTime) {
+    animation:
+        wait #{$waitTime},
+        fade-in 3000ms #{$waitTime},
+}
+
+@keyframes wait {
+    0% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+
+
+@keyframes fade-in {
+    0% {
+       opacity: 0;
+       transform: translateX(50vh);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+ }
+

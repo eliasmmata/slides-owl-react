@@ -21,21 +21,23 @@
             padding: 1rem 5rem;
         }
         & h2 {
-            color: #2e2e32;
+            color: #F3EADA;
             font-weight: 800;
             font-size: 5rem;
         }
         & h3 {
-            color: #343233;
+            color: #334B48;
             font-size: 3.5rem;
             font-weight: 400;
+            margin-top: -1rem;
             margin-bottom: 1rem;
+
         }
         & a {
             font-size: 2.5rem;
             font-family: $Font2;
             font-weight: 800;
-            color: #303030;
+            color: #F3EADA;
         }
     }
 }
