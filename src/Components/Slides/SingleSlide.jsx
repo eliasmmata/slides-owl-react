@@ -17,6 +17,7 @@ const SingleSlide = (params) => {
 
     if (deployedMatch === currentUrl ||  match === currentUrl) {
         console.log('hay coincidencia', match)
+        console.log('hay coincidencia', deployedMatch)
     }
 
     return (
@@ -32,7 +33,7 @@ const SingleSlide = (params) => {
                     La planta superior es una buhardilla con 2 camas individuales con suficiente espacio para añadir más camas y terraza privada
                 </span></p>
                 <div className='button-container'>
-                    {(deployedMatch !== currentUrl || match !== currentUrl) &&
+                    {((deployedMatch !== currentUrl) || (match !== currentUrl)) ?
                         <Link to='/houses/single-house-one'>
                             <button>
                                 <div>
@@ -47,6 +48,7 @@ const SingleSlide = (params) => {
                                 </div>
                             </button>
                         </Link>
+                        : null
                     }
                     <Link to='/houses/book'>
                         <button className='button-promotion'>

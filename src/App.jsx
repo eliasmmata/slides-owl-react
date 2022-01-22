@@ -41,7 +41,7 @@ function App() {
               <div style={{ display: `flex`, justifyContent: `center`, margin: `1rem auto` }}>
                 <Link to="/home">
                   <button className="app-button">
-                    <i class="pi pi-home" style={{ marginRight: `1rem` }}></i>
+                    <i className="pi pi-home" style={{ marginRight: `1rem` }}></i>
                     Volver
                   </button>
                 </Link>
@@ -55,7 +55,7 @@ function App() {
               <div style={{ display: `flex`, justifyContent: `center`, margin: `1rem auto` }}>
                 <Link to="/home">
                   <button className="app-button">
-                    <i class="pi pi-home" style={{ marginRight: `1rem` }}></i>
+                    <i className="pi pi-home" style={{ marginRight: `1rem` }}></i>
                     Volver
                   </button>
                 </Link>
@@ -83,7 +83,7 @@ function App() {
               <div style={{ display: `flex`, justifyContent: `center`, margin: `1rem auto` }}>
                 <Link to="/home">
                   <button className="app-button">
-                    <i class="pi pi-home" style={{ marginRight: `1rem` }}></i>
+                    <i className="pi pi-home" style={{ marginRight: `1rem` }}></i>
                     Volver
                   </button>
                 </Link>
@@ -97,7 +97,7 @@ function App() {
               <div style={{ display: `flex`, justifyContent: `center`, margin: `1rem auto` }}>
                 <Link to="/home">
                   <button className="app-button">
-                    <i class="pi pi-home" style={{ marginRight: `1rem` }}></i>
+                    <i className="pi pi-home" style={{ marginRight: `1rem` }}></i>
                     Volver
                   </button>
                 </Link>
