@@ -1,13 +1,15 @@
 @import '../../index.scss';
 
 .carousel-item-container {
-    height: 75vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 0 auto;
-    border: 1px solid white;
-    background: white;
+        margin: 0 auto;
+        border: 1px solid white;
+        background: white;
     /* pointer-events: none; */
+        @include desktop {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                height: 75vh;
+        }
     &:hover {
             animation-play-state: paused;
             cursor: pointer;
@@ -18,11 +20,16 @@
             min-width: 45.5vw;
             pointer-events: auto;
             & img  {
-                height: 100%;
-                object-fit: cover;
-                transition: 0.75s;
+                    height: 175px;
+                    width: 100%;
+                    object-fit: cover;
+                    transition: 350px;
+                @include tablet {
+                        height: 50vh;
+                    }
                 @include desktop {
                         min-height: 75vh;
+                        height: 100%;
                     }
                     &:hover {
                         transform: scale(1.15);
@@ -34,29 +41,78 @@
         // z index para que cuando haga animación no se vea por debajo la imagen NO QUITAR
             z-index: 100;
             background-color: $Background;
-            padding: 10rem 5rem 10rem 10rem;
+            padding: 10rem 2.5rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
             cursor: grab;
             pointer-events: auto;
+            min-height: 525px;
+            @include tablet {
+                padding: 12rem 5rem;
+                min-height: 600px;
+                justify-content: start;
+            }
+            @include desktop {
+                height: unset;
+                padding: 10rem 5rem 10rem 10rem;
+            }
             & h2 {
-                    font-weight: 600;
-                    color: $Corporate-1;
-                    text-transform: uppercase;
-                    margin-top: -6rem;
+                font-weight: 600;
+                color: $Corporate-1;
+                text-transform: uppercase;
+                margin-top: -6rem;
+                font-size: 2rem;
+                line-height: 0rem;
+                @include tablet {
+                        font-size: 2.5rem;
+                        line-height: 2.5rem;
+                }
             }
             & h3 {
-                    color: $Texto;
-                    font-weight: 800;
-                    margin: 2rem 0;
+                color: $Texto;
+                font-weight: 800;
+                margin: 2rem 0;
+                font-size: 4rem;
+                margin-bottom: unset;
+                & span {
+                        display: initial;
+                        @include tablet {
+                        display: block;
+                        }
+                }
+                @include tablet {
+                        font-size: 5rem;
+                        margin-bottom: 1rem;
+                }
             }
             & p {
                     color: $Texto;
+                    font-size: 1.5rem;
+                        @include tablet {
+                                font-size: 1.75rem;
+                        }
+                & .mobile-description {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 5; /* number of lines to show */
+                        line-clamp: 5;
+                        -webkit-box-orient: vertical;
+                }
             }
             & .button-container {
+                    margin-bottom: 7.5vw;
+                    padding-top: 2rem;
                     display: flex;
-                    margin-bottom: 2.5vw;
+                    justify-content: space-evenly;
+                    gap: 1rem;
+                    @include tablet {
+                        margin-bottom: 1.5vw;
+                        padding-top: 0.25rem;
+                        justify-content: unset;
+                        gap: 0;
+                    }
                     & button {
                         outline: 0;
                         overflow: hidden;
@@ -65,11 +121,19 @@
                         height: 5rem;
                         border: 1px solid $Corporate-1;
                         border-radius: 3px;
-                        margin: 0 1.5rem 0 0;
-                        min-width: 150px;
+                        margin: 0;
+                        @include tablet {
+                                margin: 0 1.5rem 0 0;
+                                min-width: 150px;
+                        }
                         & p, span {
                             color: $Corporate-1;
                             font-size: 1.5rem;
+                            min-width: 70px;
+                                @include tablet {
+                                        font-size: 1.75rem;
+                                        min-width: 75px;
+                                }
                             }
                         }
                         button div {
@@ -85,7 +149,10 @@
                             align-items: center;
                             justify-content: space-evenly;
                             height: 5rem;
-                            padding: 0.75em 2rem;
+                            padding: 1rem;
+                            @include tablet {
+                                padding: 0.75em 2rem;
+                            }
                         }
                         button:hover div {
                             transform: translateY(-5rem);
@@ -115,15 +182,18 @@
 }
 .animate__fadeOut {
         animation-duration: 3s;
+        animation-iteration-count: 1;
 }
 
-.owl-item.active {
+ .owl-item.active {
         animation-duration: 2s !important;
         & .carousel-item-left {
                 @include fade-in('1500ms');
+                animation-duration: 2s !important;
         }
 }
 
+// future implementation
 .hide-for-imageFull {
         .owl-carousel.owl-loaded {
                 .owl-nav, .owl-dots {

@@ -35,7 +35,7 @@ function App() {
           <Route path="/home" element={<OwlDemo />}></Route>
 
           <Route path="/houses/single-house-one" element={
-            <section className='app-container-slide animate__fadeIn' style={{ padding: `0 5rem` }}>
+            <section className='app-container-slide animate__fadeIn'>
               <h3 className="slide-title">Casa Link Route 1</h3>
               <SingleSlide />
               <div style={{ display: `flex`, justifyContent: `center`, margin: `1rem auto` }}>
@@ -49,7 +49,7 @@ function App() {
             </section>
           }></Route>
           <Route path="/houses/single-house-two" element={
-            <section className='app-container-slide animate__fadeIn' style={{ padding: `0 5rem` }}>
+            <section className='app-container-slide animate__fadeIn'>
               <h3 className="slide-title">Casa Link Route 2</h3>
               <SingleSlideTwo />
               <div style={{ display: `flex`, justifyContent: `center`, margin: `1rem auto` }}>
@@ -63,7 +63,7 @@ function App() {
             </section>
           }></Route>
           <Route path="/houses/single-house-three" element={
-            <section className='app-container-slide animate__fadeIn' style={{ padding: `0 5rem` }}>
+            <section className='app-container-slide animate__fadeIn'>
               <h3 className="slide-title">Casa Link Route 3</h3>
               <SingleSlideThree />
               <div style={{ display: `flex`, justifyContent: `center`, margin: `1rem auto` }}>
@@ -77,7 +77,7 @@ function App() {
             </section>
           }></Route>
           <Route path="/houses/single-house-four" element={
-            <section className='app-container-slide animate__fadeIn' style={{ padding: `0 5rem` }}>
+            <section className='app-container-slide animate__fadeIn'>
               <h3 className="slide-title">Casa Link Route 4</h3>
               <SingleSlideFour />
               <div style={{ display: `flex`, justifyContent: `center`, margin: `1rem auto` }}>
@@ -91,7 +91,7 @@ function App() {
             </section>
           }></Route>
           <Route path="/houses/single-house-five" element={
-            <section className='app-container-slide animate__fadeIn' style={{ padding: `0 5rem` }}>
+            <section className='app-container-slide animate__fadeIn'>
               <h3 className="slide-title">Casa Link Route 3</h3>
               <SingleSlideFive />
               <div style={{ display: `flex`, justifyContent: `center`, margin: `1rem auto` }}>

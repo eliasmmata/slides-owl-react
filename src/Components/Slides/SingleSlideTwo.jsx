@@ -28,11 +28,11 @@ const SingleSlideTwo = () => {
             </div>
             <div className='carousel-item-right'>
                 <h2>Apartamentos</h2>
-                <h3>Duplex<span style={{ display: `block` }}> reformado</span></h3>
-                <p>Apartamento de aproximadamente 120m² divididos en dos plantas. En la primera se encuentran
+                <h3>Duplex<span> reformado</span></h3>
+                <p><span className="mobile-description">Apartamento de aproximadamente 120m² divididos en dos plantas. En la primera se encuentran
                     2 o 3 dormitorios independientes con dos camas individuales cada uno, 2 baños completos, salón comedor y cocina independiente.
                     La planta superior es una buhardilla con 2 camas individuales con suficiente espacio para añadir más camas y terraza privada
-                </p>
+                    </span></p>
                 <div className='button-container'>
                 {match !== currentUrl &&
                         <Link to='/houses/single-house-two'>
