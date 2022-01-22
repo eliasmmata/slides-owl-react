@@ -35,7 +35,8 @@ const SingleSlideFive = () => {
                     La planta superior es una buhardilla con 2 camas individuales con suficiente espacio para añadir más camas y terraza privada
                 </span></p>
                 <div className='button-container'>
-                    {(deployedMatch !== currentUrl || match !== currentUrl) &&
+                    {/* {match !== currentUrl} PARA LOCALHOST 3000 */}
+                    {deployedMatch !== currentUrl ?
                         <Link to='/houses/single-house-five'>
                             <button>
                                 <div>
@@ -50,6 +51,7 @@ const SingleSlideFive = () => {
                                 </div>
                             </button>
                         </Link>
+                        : null
                     }
                     <Link to='/houses/book'>
                         <button className='button-promotion'>
