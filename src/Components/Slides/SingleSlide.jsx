@@ -15,10 +15,13 @@ const SingleSlide = (params) => {
     const match = 'http://localhost:3000/houses/single-house-one'
     const deployedMatch = 'https://carousel-owl-react.herokuapp.com/houses/single-house-one'
 
-    if (deployedMatch === currentUrl ||  match === currentUrl) {
-        console.log('hay coincidencia', match)
-        console.log('hay coincidencia', deployedMatch)
+    if (match === currentUrl) {
+        console.log('hay coincidencia local route', match)
     }
+    if (deployedMatch === currentUrl) {
+        console.log('hay coincidencia deploy route', deployedMatch)
+    }
+
 
     return (
         <section className='carousel-item-container'>
@@ -33,7 +36,7 @@ const SingleSlide = (params) => {
                     La planta superior es una buhardilla con 2 camas individuales con suficiente espacio para añadir más camas y terraza privada
                 </span></p>
                 <div className='button-container'>
-                    {((deployedMatch !== currentUrl) || (match !== currentUrl)) ?
+                    {deployedMatch !== currentUrl ?
                         <Link to='/houses/single-house-one'>
                             <button>
                                 <div>
