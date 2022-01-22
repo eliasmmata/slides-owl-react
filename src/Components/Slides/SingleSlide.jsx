@@ -2,35 +2,29 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import HouseOne from '../../assets/img/apartamento-2.jpg'
-import '../OwlDemo.scss';
 import './SingleSlide.scss';
-import { matchPath } from 'react-router-dom'
+import '../OwlDemo.scss';
 
-
-
-const SingleSlide = () => {
+const SingleSlide = (params) => {
     const [isActive, setActive] = useState("false");
-
     const viewFullImage = () => {
         setActive(!isActive);
     };
 
-    const [isRoute, setIsRoute] = useState("false");
-
     const currentUrl = window.location.href;
     const match = 'http://localhost:3000/houses/single-house-one'
-    if (match === currentUrl) {
+    const deployedMatch = 'https://carousel-owl-react.herokuapp.com/houses/single-house-one'
+
+    if (match === currentUrl || match === deployedMatch) {
         console.log('hay coincidencia', match)
     }
-
-
 
     return (
         <section className='carousel-item-container'>
             <div className={isActive ? 'carousel-item-left' : "image-modal"} onClick={viewFullImage}>
-                <img className="img" src={HouseOne} alt="apartamento 2" />
+                <img className='img animate__fadeInRight' src={HouseOne} alt="apartamento 1" />
             </div>
-            <div className='carousel-item-right'>
+            <div className='carousel-item-right animate__fadeIn'>
                 <h2>Apartamentos</h2>
                 <h3>Ático<span style={{ display: `block` }}>duplex</span></h3>
                 <p>Apartamento de aproximadamente 120m² divididos en dos plantas. En la primera se encuentran

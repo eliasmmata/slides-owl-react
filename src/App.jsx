@@ -20,7 +20,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 5000)
+    }, 4000)
   }, []);
 
   return (
@@ -62,7 +62,6 @@ function App() {
               </div>
             </section>
           }></Route>
-
           <Route path="/houses/single-house-three" element={
             <section className='app-container-slide animate__fadeIn' style={{ padding: `0 5rem` }}>
               <h3 className="slide-title">Casa Link Route 3</h3>

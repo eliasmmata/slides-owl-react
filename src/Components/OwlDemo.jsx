@@ -14,8 +14,7 @@ import './OwlDemo.scss';
 const OwlDemo = () => {
 
     return (
-
-        <div style={{ padding: `10rem 5rem` }} className='animate__fadeIn'>
+        <div style={{ padding: `10rem 5rem` }}>
             <OwlCarousel className="owl-theme"
                 items={1}
                 loop
@@ -24,14 +23,14 @@ const OwlDemo = () => {
                 // EN CASO DE QUE QUERAMOS FADE IN OUT EN VEZ DE DESPLAZAMIENTO LATERAL
                 animateIn={'animate__fadeIn'}
                 animateOut={'animate__fadeOut'}
-                autoplay={true}
+                /* autoplay={true} */
                 autoplayTimeout={7000}
                 autoplayHoverPause={true}
                 navSpeed={true}
                 dragEndSpeed={true}
                 dotsSpeed={2000}
             >
-                <SingleSlide/>
+                <SingleSlide />
                 <SingleSlideTwo/>
                 <SingleSlideThree/>
                 <SingleSlideFour />

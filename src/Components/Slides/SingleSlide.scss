@@ -6,6 +6,8 @@
     grid-template-columns: 1fr 1fr;
     margin: 0 auto;
     border: 1px solid white;
+    background: white;
+    /* pointer-events: none; */
     &:hover {
             animation-play-state: paused;
             cursor: pointer;
@@ -14,10 +16,14 @@
             overflow: hidden;
             cursor:zoom-in;
             min-width: 45.5vw;
+            pointer-events: auto;
             & img  {
                 height: 100%;
                 object-fit: cover;
                 transition: 0.75s;
+                @include desktop {
+                        min-height: 75vh;
+                    }
                     &:hover {
                         transform: scale(1.15);
                         transition: 0.75s;
@@ -25,25 +31,28 @@
             }
     }
     & .carousel-item-right {
-            z-index: 99999;
+        // z index para que cuando haga animación no se vea por debajo la imagen NO QUITAR
+            z-index: 100;
             background-color: $Background;
             padding: 10rem 5rem 10rem 10rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            cursor: grab;
+            pointer-events: auto;
             & h2 {
                     font-weight: 600;
-                    color: $Apartamentos;
+                    color: $Corporate-1;
                     text-transform: uppercase;
                     margin-top: -6rem;
             }
             & h3 {
-                    color: $black;
+                    color: $Texto;
                     font-weight: 800;
                     margin: 2rem 0;
             }
             & p {
-                    color: $black;
+                    color: $Texto;
             }
             & .button-container {
                     display: flex;
@@ -102,6 +111,7 @@
 // Animaciones
 .animate__fadeIn {
         animation-duration: 3s;
+        animation-iteration-count: 1;
 }
 .animate__fadeOut {
         animation-duration: 3s;
@@ -111,5 +121,13 @@
         animation-duration: 2s !important;
         & .carousel-item-left {
                 @include fade-in('1500ms');
+        }
+}
+
+.hide-for-imageFull {
+        .owl-carousel.owl-loaded {
+                .owl-nav, .owl-dots {
+                        display: none !important;
+                }
         }
 }

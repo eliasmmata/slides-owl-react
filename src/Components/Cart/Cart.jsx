@@ -11,7 +11,7 @@ const Cart = () => {
                 <h3>Cart Implementation</h3>
                 <Link to="/home">
                     <button onClick={() => navigate(-1)} className="app-button">
-                        <i class="pi pi-chevron-left" style={{ marginRight: `1rem` }}></i>
+                        <i className="pi pi-chevron-left" style={{ marginRight: `1rem` }}></i>
                         Volver
                     </button>
                 </Link>
