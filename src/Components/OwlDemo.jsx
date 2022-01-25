@@ -19,7 +19,7 @@ const OwlDemo = () => {
                 items={1}
                 loop
                 nav
-                navText={['<i className="pi pi-arrow-left"></i>', '<i className="pi pi-arrow-right"></i>']}
+                navText={['<i class="pi pi-arrow-left"></i>', '<i class="pi pi-arrow-right"></i>']}
                 // EN CASO DE QUE QUERAMOS FADE IN OUT EN VEZ DE DESPLAZAMIENTO LATERAL
                 animateIn={'animate__fadeRight'}
                 animateOut={'animate__fadeOut'}
