@@ -46,7 +46,7 @@
             flex-direction: column;
             justify-content: center;
             cursor: grab;
-            pointer-events: auto;
+            pointer-events: none;
             min-height: 525px;
             @include tablet {
                 padding: 12rem 5rem;
@@ -122,6 +122,7 @@
                         border: 1px solid $Corporate-1;
                         border-radius: 3px;
                         margin: 0;
+                        pointer-events: auto;
                         @include tablet {
                                 margin: 0 1.5rem 0 0;
                                 min-width: 150px;

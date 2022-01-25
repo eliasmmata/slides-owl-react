@@ -18,8 +18,8 @@ const SingleSlide = (params) => {
     if (match === currentUrl) {
         console.log('hay coincidencia local route', match)
     }
-    if (deployedMatch === currentUrl) {
-        console.log('hay coincidencia deploy route', deployedMatch)
+    if (deployedMatch !== currentUrl|| match !== currentUrl) {
+        console.log('local o deploy route coincide un', deployedMatch)
     }
 
 
